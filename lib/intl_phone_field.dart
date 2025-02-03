@@ -264,10 +264,7 @@ class IntlPhoneField extends StatefulWidget {
     this.keyboardType = TextInputType.phone,
     this.controller,
     this.focusNode,
-    this.decoration = const InputDecoration(
-      filled: true,
-      fillColor: Colors.red
-    ),
+    this.decoration = const InputDecoration(),
     this.style,
     this.dropdownTextStyle,
     this.onSubmitted,
