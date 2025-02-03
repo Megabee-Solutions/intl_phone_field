@@ -264,7 +264,10 @@ class IntlPhoneField extends StatefulWidget {
     this.keyboardType = TextInputType.phone,
     this.controller,
     this.focusNode,
-    this.decoration = const InputDecoration(),
+    this.decoration = const InputDecoration(
+      filled: true,
+      fillColor: Colors.red
+    ),
     this.style,
     this.dropdownTextStyle,
     this.onSubmitted,
@@ -383,6 +386,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
   Widget build(BuildContext context) {
     return TextFormField(
       key: widget.formFieldKey,
+      enableInteractiveSelection: false,
       initialValue: (widget.controller == null) ? number : null,
       autofillHints: widget.disableAutoFillHints ? null : [AutofillHints.telephoneNumberNational],
       readOnly: widget.readOnly,
